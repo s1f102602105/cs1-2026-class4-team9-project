@@ -1,10 +1,92 @@
+body{
+     margin: 10px 20px 10px 20px;
+     background-color: #898989;
+}
+
 h1{
     font-size: 70px;
     color: aliceblue;
     background-color: black;
-    margin: 10px 10px 10px 10px;
+   
 }
-p.name{
-    color: #010101;
-    margin: 10px 10px 10px 10px;
+
+h1::first-letter {
+    color: #d2f205;
+    font-size: 80px;
+}
+p{
+    color: #010101;  
+    background-color: rgb(240, 240, 240);
+    padding: 10px 5px 10px 5px;
+}
+
+h2{
+    font-size: 30px;
+    border-bottom: solid 5px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  margin: 20px 0;
+}
+
+/* 縦線を描く（疑似要素 ::before を使用） */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px; /* 日付の横に線を引くための位置調整 */
+  width: 2px;
+  background-color: #ccc; /* 線の色 */
+}
+
+/* 各アイテムの並び */
+.timeline-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+/* 日付エリアのスタイル */
+.timeline-date {
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: #555;
+  padding-top: 2px;
+}
+
+/* タイムラインの「ドット（点）」を描く（疑似要素 ::after を使用） */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 117px; /* 縦線の真上に重ねる（left: 120px - ドットの半径） */
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #333; /* ドットの色（米津さんの世界観に合わせるなら黒やグレー） */
+  border-radius: 50%; /* 丸くする */
+  z-index: 1;
+}
+
+/* コンテンツエリアのスタイル */
+.timeline-content {
+  padding-left: 40px; /* 線とドットからの余白 */
+  flex: 1;
+}
+
+.timeline-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #393939;
+  line-height: 1.6;
 }
