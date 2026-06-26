@@ -1,0 +1,10 @@
+h1{
+    font-size: 70px;
+    color: aliceblue;
+    background-color: black;
+    margin: 10px 10px 10px 10px;
+}
+p.name{
+    color: #010101;
+    margin: 10px 10px 10px 10px;
+}
