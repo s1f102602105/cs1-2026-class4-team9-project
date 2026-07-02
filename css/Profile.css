@@ -1,13 +1,13 @@
 body{
      margin: 10px 20px 10px 20px;
-     background-color: #898989;
+     background-color: #ffffff;
+     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    
 }
 
 h1{
     font-size: 70px;
-    color: aliceblue;
-    background-color: black;
-   
+    color: rgb(22, 86, 142);
 }
 
 h1::first-letter {
@@ -16,8 +16,17 @@ h1::first-letter {
 }
 p{
     color: #010101;  
-    background-color: rgb(240, 240, 240);
-    padding: 10px 5px 10px 5px;
+    border-radius: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+  border-radius: 20px;
+  background-color: #c0c0c0;
 }
 
 h2{
@@ -30,6 +39,7 @@ h2{
   padding: 0;
   position: relative;
   margin: 20px 0;
+  
 }
 
 /* 縦線を描く（疑似要素 ::before を使用） */
@@ -89,4 +99,8 @@ h2{
   font-size: 0.9rem;
   color: #393939;
   line-height: 1.6;
+}
+
+img{
+   border-radius: 20px;
 }
